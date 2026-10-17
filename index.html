@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Epic Anime</title>
+   <link rel="stylesheet" href="./assets/styles/styles.css">
+</head>
+
+<body>
+   <header>
+      <nav class="navbar" aria-label="Main navigation">
+         <a class="brand" href="./"><span aria-hidden="true">叙</span><span><strong>Epic Anime</strong><small>Laugh,
+                  Watch, Repeat!</small></span></a>
+         <div class="nav-links">
+            <a class="active" href="./" aria-current="page">Home</a>
+            <details>
+               <summary>Browse <svg viewBox="0 0 24 24" aria-hidden="true">
+                     <path d="m7 10 5 5 5-5" />
+                  </svg></summary>
+               <div class="dropdown"><a href="#popular">Popular anime</a><a href="#releases">New releases</a><a
+                     href="#genres">Genres</a></div>
+            </details>
+            <a href="#trailers">Trailers</a>
+            <form class="search" role="search" action="./"><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="10" cy="10" r="6" />
+                  <path d="m15 15 5 5" />
+               </svg><input type="search" name="q" placeholder="Search" aria-label="Search anime"></form>
+         </div>
+         <div class="actions">
+            <a class="icon-button" href="#watchlist" aria-label="Watchlist"><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M7 4h10v16l-5-3-5 3z" />
+               </svg></a>
+            <a class="icon-button" href="#profile" aria-label="Profile"><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="8" r="3" />
+                  <path d="M6 20v-2a6 6 0 0 1 12 0v2" />
+               </svg></a>
+            <a class="premium" href="#premium"><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m3 7 4 4 5-7 5 7 4-4-3 12H6z" />
+               </svg>Try Premium</a>
+         </div>
+      </nav>
+      <div class="hero">
+         <div class="hero-content">
+            <section class="welcome" aria-labelledby="welcome-title">
+               <h1 id="welcome-title">Welcome to <span>EpicAnime</span></h1>
+               <p>Embark on a Journey of Endless Stories and Epic Adventures.</p>
+               <div class="hero-buttons">
+                  <a class="button button-explore" href="#popular">Explore Now <span aria-hidden="true">&#8599;</span></a>
+                  <a class="button button-watch" href="#trailers">Start Watching <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 11 7-11 7z"/></svg></a>
+               </div>
+            </section>
+            <article class="feed" aria-labelledby="feed-title">
+               <h2 id="feed-title">Epic Feed</h2>
+               <h3>Major 'One Piece' Revelation Unveiled!*</h3>
+               <p>Creator Eiichiro Oda reveals a game-changing event in 'One Piece'! What's next for Luffy and the crew? Dive into the latest scoop on the beloved series.</p>
+               <a href="#news">Read more</a>
+            </article>
+         </div>
+         <div class="hero-art">
+            <img class="luffy" src="./assets/images/cabelosDeNuvem.png" alt="Luffy laughing in his Gear 5 form" fetchpriority="high">
+            <img class="one-piece-logo" src="./assets/images/onepiece.png" alt="One Piece">
+         </div>
+      </div>
+   </header>
+   <main class="page-content">
+      <section class="featured section" id="popular" aria-labelledby="featured-title">
+         <div class="section-heading"><h2 id="featured-title">Featured Anime <span>of the week</span></h2></div>
+         <div class="featured-stage">
+            <div class="featured-backdrop"></div>
+            <div class="featured-label"><span>One Piece</span><small>Adventure · Fantasy</small></div>
+            <img class="featured-character" src="./assets/images/LuffyDinamico.png" alt="Monkey D. Luffy" loading="lazy">
+            <button class="carousel-arrow previous" aria-label="Previous featured anime">‹</button>
+            <button class="carousel-arrow next" aria-label="Next featured anime">›</button>
+            <div class="featured-controls"><button class="featured-watch" aria-haspopup="dialog" aria-controls="video-dialog"><span class="play-button" aria-hidden="true">▶</span><span>Start Watching</span></button><div class="carousel-dots" aria-label="Featured anime selection"></div></div>
+         </div>
+      </section>
+      <section class="section" id="genres" aria-labelledby="genres-title">
+         <div class="section-heading"><h2 id="genres-title">Popular Genres</h2><button class="text-button" id="show-all">View all ↗</button></div>
+         <div class="genre-filters" aria-label="Filter anime by genre"><button class="selected" data-genre="All">All</button><button data-genre="Action">Action</button><button data-genre="Adventure">Adventure</button><button data-genre="Fantasy">Fantasy</button></div>
+         <div class="anime-grid" id="anime-grid"></div>
+      </section>
+      <section class="spotlight section" aria-labelledby="spotlight-title">
+         <div class="spotlight-image" role="img" aria-label="Hunter x Hunter artwork"></div>
+         <div class="spotlight-copy"><p class="eyebrow">THE ADVENTURE STARTS HERE</p><h2 id="spotlight-title"><a href="./pages/hunter-x-hunter/index.html">Hunter x Hunter</a></h2><p class="metadata">Adventure · Fantasy · Friendship</p><p>Follow Gon and his friends into a world of extraordinary challenges. Discover a new adventure, unforgettable characters, and the courage to chase a dream.</p><div class="hero-buttons"><a class="button button-watch" href="./pages/hunter-x-hunter/index.html">▶ Start Watching</a><button class="button button-explore" id="save-anime">＋ Add to watchlist</button></div></div>
+      </section>
+      <section class="section animated-moments" aria-labelledby="moments-title">
+         <div class="section-heading"><h2 id="moments-title">Anime em movimento</h2><button class="text-button" id="toggle-gifs" aria-pressed="false">Pausar GIFs</button></div>
+         <div class="gif-grid">
+            <figure class="gif-card"><img src="https://media.giphy.com/media/YKZs5YQrcBnt1jR6A6/giphy.gif" data-gif-id="YKZs5YQrcBnt1jR6A6" alt="Luffy lutando contra Kaido em One Piece" loading="lazy" width="480" height="270"><figcaption><a href="./pages/one-piece/index.html">One Piece · Luffy vs. Kaido</a><a href="https://giphy.com/gifs/YKZs5YQrcBnt1jR6A6" target="_blank" rel="noopener noreferrer">GIPHY ↗</a></figcaption></figure>
+            <figure class="gif-card"><img src="https://media.giphy.com/media/6XcNZSMFJfV5KUPwHN/giphy.gif" data-gif-id="6XcNZSMFJfV5KUPwHN" alt="Naruto usando Rasengan" loading="lazy" width="480" height="270"><figcaption><a href="./pages/naruto/index.html">Naruto · Rasengan</a><a href="https://giphy.com/gifs/6XcNZSMFJfV5KUPwHN" target="_blank" rel="noopener noreferrer">GIPHY ↗</a></figcaption></figure>
+         </div>
+      </section>
+      <section class="section" id="news" aria-labelledby="news-title">
+         <div class="section-heading"><h2 id="news-title">Epic Feed <span>Latest &amp; Fresh</span></h2></div>
+         <div class="news-grid" id="news-grid"></div>
+      </section>
+      <section class="section" id="releases" aria-labelledby="releases-title">
+         <div class="section-heading"><h2 id="releases-title">Anime Taking Presence</h2><span class="eyebrow">YOUR NEXT ADVENTURE</span></div>
+         <div class="release-grid" id="release-grid"></div>
+      </section>
+      <section class="trailer-banner section" id="trailers" aria-labelledby="trailer-title"><div><p class="eyebrow">ENTER A WORLD OF CURSES</p><h2 id="trailer-title"><a href="./pages/jujutsu-kaisen/index.html">JUJUTSU KAISEN</a></h2><p>A new adventure is waiting.</p><a class="button trailer-link" href="https://www.youtube.com/results?search_query=jujutsu+kaisen+official+trailer" target="_blank" rel="noopener noreferrer">WATCH TRAILERS ↗</a></div></section>
+      <section class="farewell"><span class="farewell-symbol" aria-hidden="true">☠</span><h2>Waiting for What's Beyond!</h2><p>Your next favorite story is just a click away.</p><a class="button button-explore" href="#popular">Explore more ↑</a></section>
+   </main>
+   <footer class="footer"><div><h2>Quick Navigation</h2><a href="./">Home</a><a href="#popular">Popular anime</a><a href="#genres">Genres</a><a href="#releases">New releases</a><a href="#trailers">Trailers</a></div><div><h2>Connect with us</h2><a href="https://www.youtube.com/results?search_query=anime+official" target="_blank" rel="noopener noreferrer">YouTube ↗</a><a href="#news">Epic Feed</a></div><div><h2 class="footer-brand">Epic Anime</h2><a href="#profile">Your account</a><a href="#watchlist">Watchlist</a><a href="#premium">Premium</a></div><p class="copyright">© 2026 Epic Anime. Laugh, Watch, Repeat!</p></footer>
+   <dialog id="info-dialog"><button class="dialog-close" aria-label="Close dialog">×</button><h2></h2><p></p><button class="button button-watch dialog-dismiss">Got it</button></dialog>
+   <dialog id="video-dialog" class="video-dialog" aria-labelledby="video-title">
+      <div class="video-heading"><h2 id="video-title">One Piece — Trailer</h2><button class="video-close" aria-label="Close video" autofocus>&times;</button></div>
+      <div class="video-frame"></div>
+      <a class="video-external" href="https://www.youtube.com/watch?v=1KMcoJBMWE4" target="_blank" rel="noopener noreferrer">Assistir no YouTube ↗</a>
+   </dialog>
+   <aside class="sound-widget" aria-label="Som de One Piece">
+      <button class="sound-toggle" aria-expanded="false" aria-controls="one-piece-sound">♫ Som de One Piece</button>
+      <div id="one-piece-sound" class="sound-panel" hidden>
+         <div class="sound-heading"><span>One Piece · Trailer</span><button class="sound-stop" aria-label="Parar som e fechar">&times;</button></div>
+         <div class="sound-player"></div>
+         <p>Controle o volume pelo player.</p>
+      </div>
+   </aside>
+   <script src="./assets/scripts/sound.js"></script>
+   <script src="./assets/scripts/main.js"></script>
+   <script src="./assets/scripts/animations.js"></script>
+</body>
+
+</html>

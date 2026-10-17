@@ -1,0 +1,44 @@
+@keyframes epic-enter {
+   from { opacity: 0; transform: translateY(22px); }
+   to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes epic-float {
+   0%, 100% { transform: translateY(0); }
+   50% { transform: translateY(-9px); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+   .welcome, .detail-copy, .detail-poster {
+      animation: epic-enter .65s ease-out both;
+   }
+
+   .detail-copy { animation-delay: .12s; }
+   .hero-art .luffy { animation: epic-float 5s ease-in-out infinite; }
+
+   .epic-reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .55s ease, transform .55s ease;
+      transition-delay: var(--reveal-delay, 0ms);
+   }
+
+   .epic-reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+   .character-card, .gif-card, .news-card, .release-card {
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+   }
+
+   .character-card:hover, .gif-card:hover, .news-card:hover, .release-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 28px #0005;
+      border-color: #00d77a55;
+   }
+
+   .character-portrait img { transition: transform .4s ease; }
+   .character-card:hover .character-portrait img { transform: scale(1.045); }
+   .button, .icon-button, .premium { transition: transform .2s ease, background .2s ease, box-shadow .2s ease; }
+   .button:hover, .icon-button:hover, .premium:hover { transform: translateY(-2px); box-shadow: 0 5px 16px #0004; }
+   .button:active, .icon-button:active { transform: translateY(0); }
+   dialog[open] { animation: epic-enter .25s ease-out; }
+}
