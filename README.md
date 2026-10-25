@@ -124,3 +124,6 @@ Os favoritos ficam no navegador utilizado e não são sincronizados entre dispos
 Desenvolvido por [Paulo Henrique](https://github.com/PauloHenrique993940).
 
 Personagens, marcas, imagens, GIFs e vídeos pertencem aos respectivos titulares e fontes. Este repositório não atribui licença de redistribuição a esses materiais.
+## Melhorias
+
+Documentação atualizada com informações sobre o projeto.
